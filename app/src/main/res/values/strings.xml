@@ -1,0 +1,91 @@
+<!--
+  ~ Copyright (C) 2018 The Android Open Source Project
+  ~
+  ~    Author: Gehad Ahmed
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~         http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Book Store 2</string>
+    <string name="EditorActivityLabel">Add Book</string>
+
+    <string name="Title_bookName">Book Name*:</string>
+    <string name="hint_bookName">Book Name</string>
+
+    <string name="Title_bookPrice">Book Price (USD)*:</string>
+    <string name="hint_bookPrice">Price in USD</string>
+
+    <string name="Title_bookQuantity">Book Quantity*:</string>
+    <string name="hint_bookQuantity">Book Quantity</string>
+
+    <string name="Title_bookSupp">Book Supplier*:</string>
+    <string name="hint_bookSupp">Book Supplier</string>
+
+    <string name="Title_bookSuppPhone">Book Supplier Phone*:</string>
+    <string name="hint_bookSuppPhone">Book Supplier Phone</string>
+
+    <string name="hint_main">* Mandatory Fields</string>
+
+    <string name="action_save">save</string>
+    <string name="action_delete">delete</string>
+
+    <string name="action_delete_all_entries">Delete All Books</string>
+
+    <string name="bookSaleButtonText">SALE</string>
+    <string name="emptyViewText">There are No Books in your Inventory!\nGet started by adding a book!</string>
+    <string name="decreaseQtyText">-</string>
+    <string name="increaseQtyText">+</string>
+    <string name="orderButtonText">Order</string>
+
+    <!--As setText method doesn't accept concatenation, the "%1$s" is an argument type String
+    will be replaced by book price value-->
+    <string name="bookPrice_TextView">%1$s USD</string>
+
+    <!--As setText method doesn't accept concatenation, the "%1$s" is an argument type String
+    will be replaced by book quantity value-->
+    <string name="bookQty_TextView">Quantity: %1$s</string>
+
+    <string name="successfulSale_Toast">Book sold successfully!</string>
+    <string name="nothingToSell_Toast">Sorry, You don\'t have enough books for Sale!</string>
+    <string name="errorSale_Toast">Error Selling this book</string>
+
+    <string name="editor_activity_title_new_book">Add Book</string>
+    <string name="editor_activity_title_edit_book">Edit Book</string>
+
+    <string name="missing_data">Please fill all the required fields</string>
+
+    <string name="editor_insert_book_failed">Error with saving the book</string>
+    <string name="editor_insert_book_successful">Book saved successfully</string>
+
+    <string name="editor_update_book_successful">Book updated</string>
+    <string name="editor_update_book_failed">Error with updating the book</string>
+
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+
+    <string name="editor_delete_book_successful">Book deleted successfully</string>
+    <string name="editor_delete_book_failed">Error with deleting this book</string>
+
+    <string name="delete_dialog_msg">Delete this book?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="deleteAll_dialog_msg">Delete All Books?</string>
+
+    <string name="main_delete_AllBooks_successful">All Books are deleted successfully</string>
+    <string name="main_delete_AllBooks_failed">Error with deleting all books</string>
+
+    <string name="decrement_toast">This book is not Available</string>
+</resources>
