@@ -159,7 +159,7 @@ public class EditorActivity extends AppCompatActivity implements
             public void onClick(View view) {
                 // Get Quantity value from EditText field
                 // If the EditText field is blank (null), assign Qty to equal zero.
-                if (TextUtils.isEmpty(mQuantityEditText.getText().toString().trim()) && !mBookHasChanged){
+                if (TextUtils.isEmpty(mQuantityEditText.getText().toString().trim())){
                     Qty = 0;
                 } else{
                     Qty = Integer.valueOf(mQuantityEditText.getText().toString().trim());
@@ -181,7 +181,7 @@ public class EditorActivity extends AppCompatActivity implements
             public void onClick(View view) {
                 // Get Quantity value from EditText field
                 // If the EditText field is blank (null), assign Qty to equal zero.
-                if (TextUtils.isEmpty(mQuantityEditText.getText().toString().trim()) && !mBookHasChanged){
+                if (TextUtils.isEmpty(mQuantityEditText.getText().toString().trim())){
                     Qty = 0;
                 } else{
                     Qty = Integer.valueOf(mQuantityEditText.getText().toString().trim());
@@ -197,10 +197,15 @@ public class EditorActivity extends AppCompatActivity implements
         mOrderBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String uri = "tel:" + mSuppPhoneEditText.getText().toString().trim();
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(uri));
-                //intent.setData(Uri.parse(uri));
-                startActivity(intent);
+                if(TextUtils.isEmpty(mSuppPhoneEditText.getText().toString().trim())){
+                    Toast.makeText(view.getContext(), getString(R.string.provide_tel_number),
+                            Toast.LENGTH_SHORT).show();
+                }else {
+                    String uri = "tel:" + mSuppPhoneEditText.getText().toString().trim();
+                    Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(uri));
+                    //intent.setData(Uri.parse(uri));
+                    startActivity(intent);
+                }
             }
         });
     }

@@ -134,33 +134,5 @@ public class BookCursorAdapter extends CursorAdapter {
                 }
             }
         });
-
-        // Setup the item click listener
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Form the content URI that represents the specific book that was clicked on,
-                // by appending the "id" (passed as input to this method) onto the
-                // {@link BookEntry#CONTENT_URI}.
-                // For example, the URI would be "content://com.example.gehad.bookstore2/Books/2"
-                // if the book with ID 2 was clicked on.
-                /*
-                 * Since ListView item ID starts from 0, and SQL database ID starts from 1,
-                 * So, we will add 1 on the item position to match the ID in the database.
-                 */
-                int id = cursor.getPosition() + 1;
-                Uri currentBookUri = ContentUris.withAppendedId(BookEntry.CONTENT_URI, id);
-                Log.v( "ID", Integer.toString(id) );
-
-                // Create new intent to go to {@link EditorActivity}
-                Intent intent = new Intent(view.getContext(), EditorActivity.class);
-
-                // Set the URI on the data field of the intent
-                intent.setData(currentBookUri);
-
-                // Launch the {@link EditorActivity} to display the data for the current book.
-                view.getContext().startActivity(intent);
-            }
-        });
     }
 }

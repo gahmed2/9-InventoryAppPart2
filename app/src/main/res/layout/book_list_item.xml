@@ -67,6 +67,8 @@
         android:textSize="14sp"
         android:textStyle="bold"
         android:gravity="center"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:textColor="@color/default_black"
         android:text="@string/bookSaleButtonText"
         android:background="@drawable/rounded_corners_sale"

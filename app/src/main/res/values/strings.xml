@@ -88,4 +88,5 @@
     <string name="main_delete_AllBooks_failed">Error with deleting all books</string>
 
     <string name="decrement_toast">This book is not Available</string>
+    <string name="provide_tel_number">Please provide a telephone number</string>
 </resources>
